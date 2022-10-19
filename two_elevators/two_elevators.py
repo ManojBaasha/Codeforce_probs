@@ -1,6 +1,34 @@
 
 
+num = int(input(""))
 
-board_size = input("").split()
-per_square = int(board_size[0]) * int(board_size[1])
-print(int(per_square/2))
+for i in range(num):
+    len, query= input("").split()
+    len = int(len)
+    query = int(query)
+
+    arr = input("").split()
+
+    odd_count = 0
+    even_count = 0
+
+    for i in arr:
+        if(int(i)%2 == 0):
+            even_count = even_count + 1
+        else:
+            odd_count = odd_count + 1
+    
+    for i in range(query):
+        a,b = input("").split()
+
+        a = int(a)
+        b = int(b)
+
+
+            
+
+
+
+
+
+
