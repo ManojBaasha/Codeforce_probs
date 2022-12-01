@@ -1,46 +1,31 @@
 
+# Open a file: file
+file = open('read.txt',mode='r')
+ 
+# read all lines at once
+all_of_it = file.read()
 
-num = int(input(""))
 
-for i in range(num):
-    len, query = input("").split()
-    len = int(len)
-    query = int(query)
+all_of_it = all_of_it.split('\n\n')
+maxs = 0
+individual_calories = []
 
-    arr = input("").split()
+for i in all_of_it:
+    max_sum=0
+    i = i.split()
+    for j in i:
+        max_sum = max_sum + int(j)
+    individual_calories.append(max_sum)
+    
+    
+#print(individual_calories)
 
-    odd_count = 0
-    even_count = 0
-    total = 0
+for i in range(3):
+    maxs = maxs + max(individual_calories)
+print(maxs)
+    
 
-    for i in arr:
-        if (int(i) % 2 == 0):
-            even_count = even_count + 1
-        else:
-            odd_count = odd_count + 1
 
-        total = total + int(i)
+# print(max)
 
-    for i in range(query):
-        a, b = input("").split()
 
-        a = int(a)
-        b = int(b)
-
-        if (a == 0):
-
-            total = total + (b*even_count)
-
-            if (b % 2 != 0):
-                odd_count = even_count + odd_count
-                even_count = 0
-
-        if (a == 1):
-
-            total = total + (b*odd_count)
-
-            if (b % 2 != 0):
-                even_count = even_count + odd_count
-                odd_count = 0
-
-        print(total)
