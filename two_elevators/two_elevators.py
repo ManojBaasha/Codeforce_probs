@@ -20,9 +20,13 @@ for i in all_of_it:
     
 #print(individual_calories)
 
-for i in range(3):
-    maxs = maxs + max(individual_calories)
-print(maxs)
+maxs1 = max(individual_calories)
+individual_calories.remove(maxs1)
+maxs2 = max(individual_calories)
+individual_calories.remove(maxs2)
+maxs3 = max(individual_calories)
+
+print(maxs1+maxs2+maxs3)
     
 
 
